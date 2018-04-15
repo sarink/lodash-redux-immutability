@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  frontend:
+    build: ./
+    tty: true
+    command: bash -c "npm install && npm run start:dev"
+    environment:
+      - PORT=3007
+    ports:
+      - "3007:3007"
+    volumes:
+      - ./:/lodash-redux-immutability

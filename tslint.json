@@ -1,0 +1,72 @@
+{
+  "extends": "tslint-config-airbnb",
+  "rules": {
+    "align": false,
+    "no-increment-decrement": false,
+    "ter-arrow-parens": false,
+    "variable-name": false,
+    "object-shorthand-properties-first": false,
+
+    "class-name": true,
+    "interface-over-type-literal": true,
+    "interface-name": [true, "always-prefix"],
+    "import-name": {
+      "options": [
+        { "lodashClone": "_clone" },
+        { "lodashGet": "_get" },
+        { "lodashIsempty": "_isEmpty" },
+        { "lodashIsnumber": "_isNumber" },
+        { "lodashIsstring": "_isString" },
+        { "lodashSetwith": "_setWith" },
+        { "lodashUnset": "_unset" }
+      ]
+    },
+    "no-unused-variable": true,
+    "object-curly-spacing": [true, "always"],
+    "object-shorthand-properties-first": true,
+    "ordered-imports": [true, { "grouped-imports": true, "module-source-path": "full" }],
+    "max-line-length": [true, 130],
+    "prefer-const": true,
+    "quotemark": {
+      "options": ["single", "jsx-double"]
+    },
+    "space-before-function-paren": ["warning", {
+        "anonymous": "always",
+        "named": "never",
+        "asyncArrow": "always"
+    }],
+    "space-in-parens": [true, "never"],
+    "strict-boolean-expressions": [true, "allow-null-union", "allow-undefined-union"],
+    "ter-indent": [true, 2],
+    "trailing-comma": {
+      "options": [{ "multiline": "always", "singleline": "never" }]
+    },
+    "typedef-whitespace": [
+      true,
+      {
+        "call-signature": "onespace",
+        "index-signature": "nospace",
+        "parameter": "nospace",
+        "property-declaration": "nospace",
+        "variable-declaration": "nospace"
+      },
+      {
+        "call-signature": "onespace",
+        "index-signature": "onespace",
+        "parameter": "nospace",
+        "property-declaration": "onespace",
+        "variable-declaration": "nospace"
+      }
+    ],
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-module",
+      "check-separator",
+      "check-rest-spread",
+      "check-preblock"
+    ]
+  }
+}
