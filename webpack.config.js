@@ -15,6 +15,8 @@ module.exports = {
   context: path.resolve(__dirname),
 
   entry: {
+    'lodash-redux-immutability': ['src/lodash-redux-immutability/lodash-redux-immutability.ts'],
+    tests: ['src/tests/tests.ts'],
   },
 
   output: {
@@ -32,7 +34,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        include: [path.resolve(__dirname, demoDirName)],
+        include: [path.resolve(__dirname, 'src'), path.resolve(__dirname, 'node_modules')],
         use: ['style-loader', 'css-loader'],
       },
     ],
@@ -49,6 +51,11 @@ module.exports = {
   plugins: [
     isProd ? new CleanWebpackPlugin(path.resolve(__dirname, distDirName)) : new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),
+    new HtmlWebpackPlugin({
+      filename: 'tests.html',
+      template: 'src/tests/tests.html',
+      inject: true,
+    }),
   ],
 
   devServer: {
