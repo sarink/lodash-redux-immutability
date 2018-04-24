@@ -3,6 +3,10 @@ require('mocha/mocha.css');
 
 mocha.setup('bdd');
 
-require('./lodash-redux-immutability-tests');
+require('./deleteIn-tests');
+require('./getIn-tests');
+// require('./mergeDeep-tests');
+require('./setIn-tests');
+require('./updateIn-tests');
 
 mocha.run();
