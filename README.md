@@ -33,7 +33,6 @@ When setting/updating, passing a number (ie, `3`) in your `path` will look for a
 
 
 ## API
-
 ### updateIn(state:Object, path:Array<string|number>, valueToUpdate:Object)
 Merges (spreads) `valueToUpdate` at `path` inside of `state` with the current value found at this path, creating any keys in path that do not exist, returning a new object where affected objects in the path have a new reference.
 
