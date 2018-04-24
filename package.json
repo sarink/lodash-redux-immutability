@@ -11,11 +11,14 @@
     "lint:fix": "tslint --project . --fix"
   },
   "keywords": [
+    "lodash immutable set",
+    "lodash immutable update",
     "lodash",
     "immutable",
     "redux",
     "helper",
-    "immutable set"
+    "immutable set",
+    "immutable update"
   ],
   "repository": {
     "type": "git",
