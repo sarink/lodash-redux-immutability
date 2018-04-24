@@ -3,12 +3,13 @@
   "author": "https://sarink.net",
   "version": "0.0.1",
   "description": "Lean immutable wrappers around lodash get/set/update/delete, especially helpful for redux reducers.",
-  "main": "dist/lodash-redux-immutability",
+  "main": "dist/lodash-redux-immutability/lodash-redux-immutability",
   "scripts": {
     "start:dev": "webpack-dev-server",
     "lint": "tslint --project src/lodash-redux-immutability",
     "lint:watch": "SHELL=/bin/bash chokidar webpack.config.* tslint.json tsconfig.json ./**/*.ts ./**/*.tsx -c \"npm run lint\" --initial --verbose",
-    "lint:fix": "tslint --project src/lodash-redux-immutability --fix"
+    "lint:fix": "tslint --project src/lodash-redux-immutability --fix",
+    "build:prod": "tsc --project src/lodash-redux-immutability"
   },
   "keywords": [
     "lodash immutable set",
